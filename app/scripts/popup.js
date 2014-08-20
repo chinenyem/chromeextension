@@ -2,22 +2,19 @@
 $(document).ready(function(){
 $.ajax({
 	url:'http://www.reddit.com/r/washingtondc.json',
-	method: 'GET',
-	success: (function(response){
+	type: 'GET',
+	success: (function(data){
 		console.log(data);
 		console.log(data.data.children[0].data.title);
 
-		var html ='<ul>';
+		var html ='<ul>' ;
 
-		for (var i=0; i<8; i++){
-			html += '<li>' + data.data.children[i].data.title + '</li>';
+		for (var i=0; i<3; i++){
+			html += '<li>' + '<a href=\" ' + data.data.children[i].data.url + ' \">' + data.data.children[i].data.title + '</a>' + '</li>';
 		}
 		html += '</ul>';
 	
 		$('.box').html(html);
-		complete (function(){
-			alert('finally appear');
-		});
 	})
 
 

@@ -1,13 +1,42 @@
 body {
     padding: 20px;
+    margin: 0;
+    background-image: url('../images/hkweather.png');
+
 }
 
 h1{
 display: block;
 font-size: 1em;
+font-family: courier;
+text-align: center;
+width: 100%;
+margin-bottom: 14%;
 -webkit-margin-before: 0.67em;
 -webkit-margin-after: 0.67em;
 -webkit-margin-start: 0px;
 -webkit-margin-end: 0px;
 font-weight: bold;
+color: blue;
 }
+
+ul {
+	list-style: none;
+	width: 220px;
+	font-family: courier;
+
+}
+
+ul, menu, dir {
+	color: black;
+	text-decoration: none;
+}
+
+.image{
+	border-radius: 100%;
+	width: 70%;
+	height: 92px;
+	margin-left: 18%;
+}
+
+
