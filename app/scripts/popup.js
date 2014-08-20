@@ -1,13 +1,9 @@
-'use strict';
 
-console.log('\'Allo \'Allo! Popup');
-
-
-$(document).ready (function(){
+$(document).ready(function(){
 $.ajax({
-	url:'http://www.reddit.com/r/washingtondc/new/.json',
-	type: 'Get',
-	success: function(response){
+	url:'http://www.reddit.com/r/washingtondc.json',
+	method: 'GET',
+	success: (function(response){
 		console.log(data);
 		console.log(data.data.children[0].data.title);
 
@@ -19,12 +15,14 @@ $.ajax({
 		html += '</ul>';
 	
 		$('.box').html(html);
-		.complete (function(){
+		complete (function(){
 			alert('finally appear');
 		});
-	}
+	})
 
 
 });
 
 });
+
+
